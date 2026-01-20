@@ -1,7 +1,9 @@
 import 'package:cleclo_rider/components/custom_appbar.dart';
 import 'package:cleclo_rider/components/order_card.dart';
+import 'package:cleclo_rider/routes/route_constants.dart';
 import 'package:cleclo_rider/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class AvailableOrdersScreen extends StatelessWidget {
   const AvailableOrdersScreen({super.key});
@@ -24,6 +26,10 @@ class AvailableOrdersScreen extends StatelessWidget {
             distance: '${2.5 + index} km',
             earnings: '₹${60 + (index * 10)}',
             serviceType: index % 2 == 0 ? 'Dry Clean' : 'Wash & Iron',
+            // Allow viewing details even before accepting
+            onTap: () {
+              context.push(RouteConstants.orderDetailsScreen);
+            },
             onAccept: () {
               // Handle accept
             },

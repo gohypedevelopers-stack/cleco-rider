@@ -26,9 +26,10 @@ class ActiveOrdersScreen extends StatelessWidget {
             earnings: '₹85',
             serviceType: 'Wash & Iron',
             isNew: false, // It's an active order
-            onAccept: () {
-               context.push(RouteConstants.orderDetailsScreen);
+            onTap: () {
+              context.push(RouteConstants.orderDetailsScreen);
             },
+            onAccept: () {},
             onDecline: () {}, // Not needed for active
           );
         },
