@@ -129,8 +129,8 @@ class _HomeScreenState extends State<HomeScreen> {
         unselectedItemColor: AppColors.gray500,
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
+          if (index == 1) context.push(RouteConstants.activeOrdersScreen);
           if (index == 2) context.push(RouteConstants.profileScreen);
-          // Other tabs logic
         },
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
