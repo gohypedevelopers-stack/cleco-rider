@@ -1,0 +1,479 @@
+{
+  "categories": {
+    "men": {
+      "id": "MEN",
+      "name": "Men",
+      "subcategories": {
+        "casual": {
+          "name": "Casual",
+          "items": [
+            {"id": "MEN-ITEM-0001", "code": "CL-MEN-0001", "name": "T-Shirt", "serviceType": "Wash", "description": "Cotton/Knit Tees - Machine Wash Friendly", "color": "#A8E6A1"},
+            {"id": "MEN-ITEM-0002", "code": "CL-MEN-0002", "name": "Jeans", "serviceType": "Wash", "description": "Denim - Standard Wash Cycle", "color": "#A8E6A1"},
+            {"id": "MEN-ITEM-0003", "code": "CL-MEN-0003", "name": "Shorts", "serviceType": "Wash", "description": "Casual Summer Bottoms", "color": "#A8E6A1"},
+            {"id": "MEN-ITEM-0007", "code": "CL-MEN-0007", "name": "Capri", "serviceType": "Wash", "description": "Short Length Casual Pants", "color": "#A8E6A1"},
+            {"id": "MEN-ITEM-0012", "code": "CL-MEN-0012", "name": "Cargo Pants", "serviceType": "Wash", "description": "Utility Pants, Cotton-rich", "color": "#A8E6A1"}
+          ]
+        },
+        "nightwear": {
+          "name": "Nightwear",
+          "items": [
+            {"id": "MEN-ITEM-0004", "code": "CL-MEN-0004", "name": "Pyjama", "serviceType": "Wash", "description": "Lightweight Sleepwear", "color": "#A8E6A1"}
+          ]
+        },
+        "active": {
+          "name": "Active",
+          "items": [
+            {"id": "MEN-ITEM-0005", "code": "CL-MEN-0005", "name": "Sweatpants", "serviceType": "Wash", "description": "Sweat/Athleisure Bottoms", "color": "#A8E6A1"},
+            {"id": "MEN-ITEM-0006", "code": "CL-MEN-0006", "name": "Trackpants", "serviceType": "Wash", "description": "Sports Bottoms, Polyester Blends", "color": "#A8E6A1"},
+            {"id": "MEN-ITEM-0013", "code": "CL-MEN-0013", "name": "Sweatshirt", "serviceType": "Wash", "description": "Cotton/Poly Hoodies & Pullovers", "color": "#A8E6A1"},
+            {"id": "MEN-ITEM-0014", "code": "CL-MEN-0014", "name": "Track Suit", "serviceType": "Wash", "description": "Two-Piece Sports Set", "color": "#A8E6A1"}
+          ]
+        },
+        "home": {
+          "name": "Home",
+          "items": [
+            {"id": "MEN-ITEM-0008", "code": "CL-MEN-0008", "name": "Bathrobe", "serviceType": "Wash", "description": "Terry/Cotton Robes", "color": "#A8E6A1"},
+            {"id": "MEN-ITEM-0010", "code": "CL-MEN-0010", "name": "Napkin", "serviceType": "Wash", "description": "Fabric Napkins/Table Linen", "color": "#A8E6A1"}
+          ]
+        },
+        "innerwear": {
+          "name": "Innerwear",
+          "items": [
+            {"id": "MEN-ITEM-0009", "code": "CL-MEN-0009", "name": "Undershirt", "serviceType": "Wash", "description": "Basics - Washable", "color": "#A8E6A1"}
+          ]
+        },
+        "swim": {
+          "name": "Swim",
+          "items": [
+            {"id": "MEN-ITEM-0011", "code": "CL-MEN-0011", "name": "Swimming Costume", "serviceType": "Wash", "description": "Nylon/Lycra Swimwear", "color": "#A8E6A1"}
+          ]
+        },
+        "formal": {
+          "name": "Formal",
+          "items": [
+            {"id": "MEN-ITEM-0015", "code": "CL-MEN-0015", "name": "Pants / Trouser", "serviceType": "Both", "description": "Formal Cotton (Wash) or Wool/Viscose (DC)", "color": "#FFD580"},
+            {"id": "MEN-ITEM-0016", "code": "CL-MEN-0016", "name": "Shirt", "serviceType": "Both", "description": "Cotton Shirts (Wash) or Silk-linen (DC)", "color": "#FFD580"},
+            {"id": "MEN-ITEM-0025", "code": "CL-MEN-0025", "name": "Blazer", "serviceType": "Dry Clean", "description": "Tailored Blazer", "color": "#F6A6A6"},
+            {"id": "MEN-ITEM-0026", "code": "CL-MEN-0026", "name": "Suit (2 Pc)", "serviceType": "Dry Clean", "description": "Tailored Suiting (Always DC)", "color": "#F6A6A6"},
+            {"id": "MEN-ITEM-0027", "code": "CL-MEN-0027", "name": "Suit (3 Pc)", "serviceType": "Dry Clean", "description": "Three-piece Suiting Set (Always DC)", "color": "#F6A6A6"},
+            {"id": "MEN-ITEM-0029", "code": "CL-MEN-0029", "name": "Safari Suit", "serviceType": "Dry Clean", "description": "Structured Ethnic/Formal Set", "color": "#F6A6A6"},
+            {"id": "MEN-ITEM-0030", "code": "CL-MEN-0030", "name": "Waist Coat", "serviceType": "Dry Clean", "description": "Formal Waistcoat/Vest", "color": "#F6A6A6"},
+            {"id": "MEN-ITEM-0032", "code": "CL-MEN-0032", "name": "Achkan", "serviceType": "Dry Clean", "description": "Embroidered Ethnic Outerwear", "color": "#F6A6A6"},
+            {"id": "MEN-ITEM-0033", "code": "CL-MEN-0033", "name": "Sherwani", "serviceType": "Dry Clean", "description": "Heavy Embroidery (DC)", "color": "#F6A6A6"},
+            {"id": "MEN-ITEM-0034", "code": "CL-MEN-0034", "name": "Pathani Suit", "serviceType": "Dry Clean", "description": "Structured Ethnic Suit", "color": "#F6A6A6"},
+            {"id": "MEN-ITEM-0035", "code": "CL-MEN-0035", "name": "Tuxedo", "serviceType": "Dry Clean", "description": "Black-Tie Formalwear (Always DC)", "color": "#F6A6A6"}
+          ]
+        },
+        "ethnic": {
+          "name": "Ethnic",
+          "items": [
+            {"id": "MEN-ITEM-0017", "code": "CL-MEN-0017", "name": "Kurta", "serviceType": "Both", "description": "Cotton (Wash) or Silk/Embroidered (DC)", "color": "#FFD580"},
+            {"id": "MEN-ITEM-0018", "code": "CL-MEN-0018", "name": "Dhoti Kurta", "serviceType": "Both", "description": "Plain Cotton Wash or Embellished (DC)", "color": "#FFD580"},
+            {"id": "MEN-ITEM-0019", "code": "CL-MEN-0019", "name": "Kurta Pyjama", "serviceType": "Both", "description": "Depends on Fabric & Embroidery", "color": "#FFD580"}
+          ]
+        },
+        "knitwear": {
+          "name": "Knitwear",
+          "items": [
+            {"id": "MEN-ITEM-0020", "code": "CL-MEN-0020", "name": "Pullover", "serviceType": "Both", "description": "Cotton (Wash) or Wool (DC)", "color": "#FFD580"},
+            {"id": "MEN-ITEM-0021", "code": "CL-MEN-0021", "name": "Sweater", "serviceType": "Dry Clean", "description": "Wool, Cashmere or Structured Knits", "color": "#F6A6A6"}
+          ]
+        },
+        "outerwear": {
+          "name": "Outerwear",
+          "items": [
+            {"id": "MEN-ITEM-0022", "code": "CL-MEN-0022", "name": "Coat", "serviceType": "Dry Clean", "description": "Structured Outerwear - Overcoats", "color": "#F6A6A6"},
+            {"id": "MEN-ITEM-0023", "code": "CL-MEN-0023", "name": "Jacket Half", "serviceType": "Dry Clean", "description": "Shorter Formal Jacket", "color": "#F6A6A6"},
+            {"id": "MEN-ITEM-0024", "code": "CL-MEN-0024", "name": "Jacket", "serviceType": "Dry Clean", "description": "Casual or Formal Jackets", "color": "#F6A6A6"},
+            {"id": "MEN-ITEM-0028", "code": "CL-MEN-0028", "name": "Overcoat", "serviceType": "Dry Clean", "description": "Heavy Wool or Lined Overcoats", "color": "#F6A6A6"},
+            {"id": "MEN-ITEM-0031", "code": "CL-MEN-0031", "name": "Long Coat", "serviceType": "Dry Clean", "description": "Full-Length Coat", "color": "#F6A6A6"}
+          ]
+        },
+        "accessories": {
+          "name": "Accessories",
+          "items": [
+            {"id": "MEN-ITEM-0036", "code": "CL-MEN-0036", "name": "Pocket Square", "serviceType": "Dry Clean", "description": "Silk or Satin Pocket Squares (Always DC)", "color": "#F6A6A6"},
+            {"id": "MEN-ITEM-0037", "code": "CL-MEN-0037", "name": "Tie", "serviceType": "Dry Clean", "description": "Silk Ties (Solvent Cleaning)", "color": "#F6A6A6"}
+          ]
+        },
+        "sports": {
+          "name": "Sports",
+          "items": [
+            {"id": "MEN-ITEM-0038", "code": "CL-MEN-0038", "name": "Sports Jacket", "serviceType": "Dry Clean", "description": "Structured Sports Jackets", "color": "#F6A6A6"}
+          ]
+        }
+      }
+    },
+    "women": {
+      "id": "WOM",
+      "name": "Women",
+      "subcategories": {
+        "casual": {
+          "name": "Casual",
+          "items": [
+            {"id": "WOM-ITEM-0001", "code": "CL-WOM-0001", "name": "T-Shirt", "serviceType": "Wash", "description": "Everyday Knit Tees", "color": "#A8E6A1"},
+            {"id": "WOM-ITEM-0002", "code": "CL-WOM-0002", "name": "Shirt", "serviceType": "Wash", "description": "Cotton/Linen Casual Shirts", "color": "#A8E6A1"},
+            {"id": "WOM-ITEM-0004", "code": "CL-WOM-0004", "name": "Capri", "serviceType": "Wash", "description": "Casual Short Pants", "color": "#A8E6A1"},
+            {"id": "WOM-ITEM-0006", "code": "CL-WOM-0006", "name": "Slacks", "serviceType": "Wash", "description": "Lightweight Casual Slacks", "color": "#A8E6A1"},
+            {"id": "WOM-ITEM-0007", "code": "CL-WOM-0007", "name": "Skirt", "serviceType": "Wash", "description": "Cotton/Linen Skirts", "color": "#A8E6A1"},
+            {"id": "WOM-ITEM-0014", "code": "CL-WOM-0014", "name": "Dangree", "serviceType": "Wash", "description": "Denim Overalls", "color": "#A8E6A1"},
+            {"id": "WOM-ITEM-0015", "code": "CL-WOM-0015", "name": "Jumpsuit", "serviceType": "Wash", "description": "Casual Jumpsuits", "color": "#A8E6A1"},
+            {"id": "WOM-ITEM-0040", "code": "CL-WOM-0040", "name": "Skirt Long", "serviceType": "Wash", "description": "Long Casual Skirts", "color": "#A8E6A1"}
+          ]
+        },
+        "denim": {
+          "name": "Denim",
+          "items": [
+            {"id": "WOM-ITEM-0003", "code": "CL-WOM-0003", "name": "Jeans", "serviceType": "Wash", "description": "Women's Denim", "color": "#A8E6A1"}
+          ]
+        },
+        "active": {
+          "name": "Active",
+          "items": [
+            {"id": "WOM-ITEM-0005", "code": "CL-WOM-0005", "name": "Trackpant", "serviceType": "Wash", "description": "Sports Bottoms", "color": "#A8E6A1"}
+          ]
+        },
+        "hosiery": {
+          "name": "Hosiery",
+          "items": [
+            {"id": "WOM-ITEM-0008", "code": "CL-WOM-0008", "name": "Stocking", "serviceType": "Wash", "description": "Lightweight Hosiery", "color": "#A8E6A1"}
+          ]
+        },
+        "swim": {
+          "name": "Swim",
+          "items": [
+            {"id": "WOM-ITEM-0009", "code": "CL-WOM-0009", "name": "Swimming Costume", "serviceType": "Wash", "description": "Swimwear", "color": "#A8E6A1"},
+            {"id": "WOM-ITEM-0010", "code": "CL-WOM-0010", "name": "Bikini", "serviceType": "Wash", "description": "Two-piece Swimwear", "color": "#A8E6A1"}
+          ]
+        },
+        "bottoms": {
+          "name": "Bottoms",
+          "items": [
+            {"id": "WOM-ITEM-0011", "code": "CL-WOM-0011", "name": "Women Leggings", "serviceType": "Wash", "description": "Active/Casual Leggings", "color": "#A8E6A1"}
+          ]
+        },
+        "basics": {
+          "name": "Basics",
+          "items": [
+            {"id": "WOM-ITEM-0012", "code": "CL-WOM-0012", "name": "Petticoat", "serviceType": "Wash", "description": "Undergarment - Washable", "color": "#A8E6A1"}
+          ]
+        },
+        "tops": {
+          "name": "Tops",
+          "items": [
+            {"id": "WOM-ITEM-0013", "code": "CL-WOM-0013", "name": "Women Top", "serviceType": "Wash", "description": "Casual Tops", "color": "#A8E6A1"}
+          ]
+        },
+        "formal": {
+          "name": "Formal",
+          "items": [
+            {"id": "WOM-ITEM-0016", "code": "CL-WOM-0016", "name": "Dress", "serviceType": "Both", "description": "Cotton Casual (Wash) or Designer (DC)", "color": "#FFD580"},
+            {"id": "WOM-ITEM-0017", "code": "CL-WOM-0017", "name": "Gown", "serviceType": "Both", "description": "Lightweight (Wash) or Designer (DC)", "color": "#FFD580"},
+            {"id": "WOM-ITEM-0018", "code": "CL-WOM-0018", "name": "Dress Long", "serviceType": "Both", "description": "Long Dresses - Check Embellishments", "color": "#FFD580"}
+          ]
+        },
+        "ethnic": {
+          "name": "Ethnic Wear",
+          "items": [
+            {"id": "WOM-ITEM-0019", "code": "CL-WOM-0019", "name": "Kameez", "serviceType": "Dry Clean", "description": "Embellished Fabrics", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0020", "code": "CL-WOM-0020", "name": "Salwar", "serviceType": "Dry Clean", "description": "Often Paired with Embellished Tops", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0021", "code": "CL-WOM-0021", "name": "Ladies Suit Ethnic", "serviceType": "Dry Clean", "description": "Complete Ethnic Suit Sets", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0022", "code": "CL-WOM-0022", "name": "Lehnga", "serviceType": "Dry Clean", "description": "Bridal/Occasion Wear", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0023", "code": "CL-WOM-0023", "name": "Choli", "serviceType": "Dry Clean", "description": "Embellished Cholis", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0024", "code": "CL-WOM-0024", "name": "Saree", "serviceType": "Dry Clean", "description": "Silk/Specialty Saris", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0025", "code": "CL-WOM-0025", "name": "Blouse", "serviceType": "Dry Clean", "description": "Embellished Blouses", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0026", "code": "CL-WOM-0026", "name": "Sharara", "serviceType": "Dry Clean", "description": "Structured Ethnic Bottoms", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0027", "code": "CL-WOM-0027", "name": "Plazzo", "serviceType": "Dry Clean", "description": "Fancy Fabrics", "color": "#F6A6A6"}
+          ]
+        },
+        "embellished": {
+          "name": "Embellished",
+          "items": [
+            {"id": "WOM-ITEM-0042", "code": "CL-WOM-0042", "name": "Kameez Embellishment", "serviceType": "Dry Clean", "description": "Embroidered/Handwork Kameez", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0043", "code": "CL-WOM-0043", "name": "Salwar Embellishment", "serviceType": "Dry Clean", "description": "Embellished Salwars", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0044", "code": "CL-WOM-0044", "name": "Plazzo Embellishment", "serviceType": "Dry Clean", "description": "Embroidered Palazzos", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0045", "code": "CL-WOM-0045", "name": "Saree Embellishment", "serviceType": "Dry Clean", "description": "Embellished Sarees", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0046", "code": "CL-WOM-0046", "name": "Dress Embellishment", "serviceType": "Dry Clean", "description": "Embellished Dresses", "color": "#F6A6A6"}
+          ]
+        },
+        "accessories": {
+          "name": "Accessories",
+          "items": [
+            {"id": "WOM-ITEM-0028", "code": "CL-WOM-0028", "name": "Dupatta", "serviceType": "Dry Clean", "description": "Silk/Embroidered Dupattas", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0029", "code": "CL-WOM-0029", "name": "Scarf", "serviceType": "Both", "description": "Cotton (Wash) or Silk (DC)", "color": "#FFD580"},
+            {"id": "WOM-ITEM-0047", "code": "CL-WOM-0047", "name": "Handgloves", "serviceType": "Wash", "description": "Fabric Gloves (Cotton)", "color": "#A8E6A1"}
+          ]
+        },
+        "outerwear": {
+          "name": "Outerwear",
+          "items": [
+            {"id": "WOM-ITEM-0030", "code": "CL-WOM-0030", "name": "Jacket", "serviceType": "Dry Clean", "description": "Structured Jackets", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0031", "code": "CL-WOM-0031", "name": "Jacket Half", "serviceType": "Dry Clean", "description": "Shorter Formal Jackets", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0032", "code": "CL-WOM-0032", "name": "Sports Jacket", "serviceType": "Dry Clean", "description": "Structured Sports Jackets", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0035", "code": "CL-WOM-0035", "name": "Coat", "serviceType": "Dry Clean", "description": "Structured Coats", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0036", "code": "CL-WOM-0036", "name": "Long Coat", "serviceType": "Dry Clean", "description": "Full-Length Coats", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0037", "code": "CL-WOM-0037", "name": "Over Coat", "serviceType": "Dry Clean", "description": "Heavy Outerwear", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0041", "code": "CL-WOM-0041", "name": "Jacket Long", "serviceType": "Dry Clean", "description": "Long-Line Jackets", "color": "#F6A6A6"}
+          ]
+        },
+        "knitwear": {
+          "name": "Knitwear",
+          "items": [
+            {"id": "WOM-ITEM-0033", "code": "CL-WOM-0033", "name": "Pullover", "serviceType": "Both", "description": "Cotton (Wash) or Wool (DC)", "color": "#FFD580"},
+            {"id": "WOM-ITEM-0034", "code": "CL-WOM-0034", "name": "Cardigan", "serviceType": "Dry Clean", "description": "Fine-Knit/Wool", "color": "#F6A6A6"},
+            {"id": "WOM-ITEM-0039", "code": "CL-WOM-0039", "name": "Jumper", "serviceType": "Dry Clean", "description": "Wool Jumpers", "color": "#F6A6A6"}
+          ]
+        },
+        "western": {
+          "name": "Western",
+          "items": [
+            {"id": "WOM-ITEM-0038", "code": "CL-WOM-0038", "name": "Ladies Suit Western", "serviceType": "Dry Clean", "description": "Tailored Western Suits", "color": "#F6A6A6"}
+          ]
+        }
+      }
+    },
+    "kids": {
+      "id": "KID",
+      "name": "Kids",
+      "subcategories": {
+        "casual": {
+          "name": "Casual",
+          "items": [
+            {"id": "KID-ITEM-0001", "code": "CL-KID-0001", "name": "Shirt", "serviceType": "Wash", "description": "Cotton Kids Shirts", "color": "#A8E6A1"},
+            {"id": "KID-ITEM-0002", "code": "CL-KID-0002", "name": "Jeans", "serviceType": "Wash", "description": "Children's Denim", "color": "#A8E6A1"},
+            {"id": "KID-ITEM-0003", "code": "CL-KID-0003", "name": "Pant", "serviceType": "Wash", "description": "Everyday Pants", "color": "#A8E6A1"},
+            {"id": "KID-ITEM-0014", "code": "CL-KID-0014", "name": "T-Shirt", "serviceType": "Wash", "description": "Everyday Tees", "color": "#A8E6A1"},
+            {"id": "KID-ITEM-0015", "code": "CL-KID-0015", "name": "Capri", "serviceType": "Wash", "description": "Short-Length Bottoms for Kids", "color": "#A8E6A1"},
+            {"id": "KID-ITEM-0016", "code": "CL-KID-0016", "name": "Shorts", "serviceType": "Wash", "description": "Playwear Shorts", "color": "#A8E6A1"},
+            {"id": "KID-ITEM-0022", "code": "CL-KID-0022", "name": "Dangree", "serviceType": "Wash", "description": "Denim Overalls for Kids", "color": "#A8E6A1"},
+            {"id": "KID-ITEM-0033", "code": "CL-KID-0033", "name": "Skirt", "serviceType": "Wash", "description": "Simple Skirts for Kids", "color": "#A8E6A1"}
+          ]
+        },
+        "ethnic": {
+          "name": "Ethnic",
+          "items": [
+            {"id": "KID-ITEM-0004", "code": "CL-KID-0004", "name": "Kurta", "serviceType": "Wash", "description": "Cotton Kurtas for Kids", "color": "#A8E6A1"},
+            {"id": "KID-ITEM-0006", "code": "CL-KID-0006", "name": "Kurta Pyjama", "serviceType": "Wash", "description": "Cotton Sets Typically Washable", "color": "#A8E6A1"},
+            {"id": "KID-ITEM-0009", "code": "CL-KID-0009", "name": "Sherwani", "serviceType": "Dry Clean", "description": "Embellished Ceremonial Wear", "color": "#F6A6A6"},
+            {"id": "KID-ITEM-0019", "code": "CL-KID-0019", "name": "Girl Suit Ethnic", "serviceType": "Dry Clean", "description": "Fancy Ethnic Sets", "color": "#F6A6A6"},
+            {"id": "KID-ITEM-0023", "code": "CL-KID-0023", "name": "Lehenga", "serviceType": "Dry Clean", "description": "Embellished Lehengas", "color": "#F6A6A6"},
+            {"id": "KID-ITEM-0024", "code": "CL-KID-0024", "name": "Choli", "serviceType": "Dry Clean", "description": "Embellished Choli", "color": "#F6A6A6"},
+            {"id": "KID-ITEM-0030", "code": "CL-KID-0030", "name": "Pathani Suit", "serviceType": "Dry Clean", "description": "Ethnic Suit for Boys", "color": "#F6A6A6"},
+            {"id": "KID-ITEM-0031", "code": "CL-KID-0031", "name": "Achkan", "serviceType": "Dry Clean", "description": "Ceremonial Achkan", "color": "#F6A6A6"}
+          ]
+        },
+        "nightwear": {
+          "name": "Nightwear",
+          "items": [
+            {"id": "KID-ITEM-0005", "code": "CL-KID-0005", "name": "Pyjama", "serviceType": "Wash", "description": "Kids Sleepwear", "color": "#A8E6A1"}
+          ]
+        },
+        "active": {
+          "name": "Active",
+          "items": [
+            {"id": "KID-ITEM-0007", "code": "CL-KID-0007", "name": "Track Pant", "serviceType": "Wash", "description": "Sports Bottoms for Kids", "color": "#A8E6A1"},
+            {"id": "KID-ITEM-0027", "code": "CL-KID-0027", "name": "Sweatshirt", "serviceType": "Wash", "description": "Cotton Sweatshirts", "color": "#A8E6A1"}
+          ]
+        },
+        "sports": {
+          "name": "Sports",
+          "items": [
+            {"id": "KID-ITEM-0008", "code": "CL-KID-0008", "name": "Sports Jacket", "serviceType": "Dry Clean", "description": "Structured Sports Jackets - Check Trims", "color": "#F6A6A6"}
+          ]
+        },
+        "knitwear": {
+          "name": "Knitwear",
+          "items": [
+            {"id": "KID-ITEM-0010", "code": "CL-KID-0010", "name": "Pullover", "serviceType": "Both", "description": "Fabric-Dependent - Cotton (Wash) or Wool (DC)", "color": "#FFD580"},
+            {"id": "KID-ITEM-0029", "code": "CL-KID-0029", "name": "Sweater Half", "serviceType": "Dry Clean", "description": "Wool Half-Sweaters", "color": "#F6A6A6"}
+          ]
+        },
+        "outerwear": {
+          "name": "Outerwear",
+          "items": [
+            {"id": "KID-ITEM-0011", "code": "CL-KID-0011", "name": "Jacket", "serviceType": "Dry Clean", "description": "Tailored or Lined Jackets", "color": "#F6A6A6"},
+            {"id": "KID-ITEM-0021", "code": "CL-KID-0021", "name": "Coat", "serviceType": "Dry Clean", "description": "Structured Outerwear", "color": "#F6A6A6"},
+            {"id": "KID-ITEM-0025", "code": "CL-KID-0025", "name": "Long Coat", "serviceType": "Dry Clean", "description": "Full-Length Coats for Kids", "color": "#F6A6A6"},
+            {"id": "KID-ITEM-0026", "code": "CL-KID-0026", "name": "Jacket Half", "serviceType": "Dry Clean", "description": "Shorter Suit Jackets", "color": "#F6A6A6"}
+          ]
+        },
+        "formal": {
+          "name": "Formal",
+          "items": [
+            {"id": "KID-ITEM-0012", "code": "CL-KID-0012", "name": "Suit (2 Pc)", "serviceType": "Dry Clean", "description": "Tailored Children's Suits", "color": "#F6A6A6"},
+            {"id": "KID-ITEM-0013", "code": "CL-KID-0013", "name": "Suit (3 Pc)", "serviceType": "Dry Clean", "description": "Three-Piece Formal Sets", "color": "#F6A6A6"},
+            {"id": "KID-ITEM-0017", "code": "CL-KID-0017", "name": "Dress Long", "serviceType": "Both", "description": "Casual (Wash) Or Fancy (DC)", "color": "#FFD580"},
+            {"id": "KID-ITEM-0018", "code": "CL-KID-0018", "name": "Dress", "serviceType": "Both", "description": "Check Embellishments", "color": "#FFD580"},
+            {"id": "KID-ITEM-0020", "code": "CL-KID-0020", "name": "Gown", "serviceType": "Dry Clean", "description": "Party Gowns for Kids", "color": "#F6A6A6"},
+            {"id": "KID-ITEM-0028", "code": "CL-KID-0028", "name": "Waist Coat", "serviceType": "Dry Clean", "description": "Formal Vests for Kids", "color": "#F6A6A6"}
+          ]
+        },
+        "swim": {
+          "name": "Swim",
+          "items": [
+            {"id": "KID-ITEM-0032", "code": "CL-KID-0032", "name": "Swimming Costume", "serviceType": "Wash", "description": "Children's Swimwear", "color": "#A8E6A1"}
+          ]
+        },
+        "accessories": {
+          "name": "Accessories",
+          "items": [
+            {"id": "KID-ITEM-0034", "code": "CL-KID-0034", "name": "Tie", "serviceType": "Dry Clean", "description": "Silk/Formal Ties", "color": "#F6A6A6"}
+          ]
+        }
+      }
+    },
+    "household": {
+      "id": "HOU",
+      "name": "Household",
+      "subcategories": {
+        "bedding": {
+          "name": "Bedding",
+          "items": [
+            {"id": "HOU-ITEM-0001", "code": "CL-HOU-0001", "name": "Bedsheet Single", "serviceType": "Wash", "description": "Single Bed Sheets (Cotton/Poly)", "color": "#A8E6A1"},
+            {"id": "HOU-ITEM-0002", "code": "CL-HOU-0002", "name": "Bedsheet Double", "serviceType": "Wash", "description": "Double Bed Sheets", "color": "#A8E6A1"},
+            {"id": "HOU-ITEM-0004", "code": "CL-HOU-0004", "name": "Pillow Covers", "serviceType": "Wash", "description": "Standard Pillow Cases", "color": "#A8E6A1"},
+            {"id": "HOU-ITEM-0005", "code": "CL-HOU-0005", "name": "Blanket Single", "serviceType": "Dry Clean", "description": "Wool/Quilts often Need Dry-clean", "color": "#F6A6A6"},
+            {"id": "HOU-ITEM-0006", "code": "CL-HOU-0006", "name": "Blanket Double", "serviceType": "Dry Clean", "description": "Larger Wool/Filled Blankets", "color": "#F6A6A6"},
+            {"id": "HOU-ITEM-0012", "code": "CL-HOU-0012", "name": "Duvet", "serviceType": "Dry Clean", "description": "Filled Duvets - Specialist Cleaning", "color": "#F6A6A6"}
+          ]
+        },
+        "furnishing": {
+          "name": "Furnishing",
+          "items": [
+            {"id": "HOU-ITEM-0003", "code": "CL-HOU-0003", "name": "Curtain", "serviceType": "Dry Clean", "description": "Heavy Curtains or Delicate Fabrics - DC Recommended", "color": "#F6A6A6"},
+            {"id": "HOU-ITEM-0008", "code": "CL-HOU-0008", "name": "Cushion Cover", "serviceType": "Wash", "description": "Cotton/Removable Cushion Covers", "color": "#A8E6A1"},
+            {"id": "HOU-ITEM-0011", "code": "CL-HOU-0011", "name": "Chair Cover", "serviceType": "Dry Clean", "description": "Upholstery-Type Chair Covers", "color": "#F6A6A6"}
+          ]
+        },
+        "towels": {
+          "name": "Towels",
+          "items": [
+            {"id": "HOU-ITEM-0009", "code": "CL-HOU-0009", "name": "Hand Towel", "serviceType": "Wash", "description": "Cotton Towels", "color": "#A8E6A1"},
+            {"id": "HOU-ITEM-0017", "code": "CL-HOU-0017", "name": "Towel", "serviceType": "Wash", "description": "Bath Towels", "color": "#A8E6A1"}
+          ]
+        },
+        "dining": {
+          "name": "Dining",
+          "items": [
+            {"id": "HOU-ITEM-0016", "code": "CL-HOU-0016", "name": "Table Cloth", "serviceType": "Wash", "description": "Cotton/Poly Table Linens", "color": "#A8E6A1"}
+          ]
+        },
+        "accessories": {
+          "name": "Accessories",
+          "items": [
+            {"id": "HOU-ITEM-0007", "code": "CL-HOU-0007", "name": "Fabric Bag", "serviceType": "Wash", "description": "Fabric Bags", "color": "#A8E6A1"},
+            {"id": "HOU-ITEM-0014", "code": "CL-HOU-0014", "name": "Gloves", "serviceType": "Wash", "description": "Fabric Gloves", "color": "#A8E6A1"}
+          ]
+        },
+        "linens": {
+          "name": "Linens",
+          "items": [
+            {"id": "HOU-ITEM-0010", "code": "CL-HOU-0010", "name": "Handkerchief", "serviceType": "Wash", "description": "Small Cotton Handkerchiefs", "color": "#A8E6A1"}
+          ]
+        },
+        "floors": {
+          "name": "Floors",
+          "items": [
+            {"id": "HOU-ITEM-0013", "code": "CL-HOU-0013", "name": "Foot Mats", "serviceType": "Wash", "description": "Small Washable Mats (Cotton/Rubber)", "color": "#A8E6A1"}
+          ]
+        },
+        "hosiery": {
+          "name": "Hosiery",
+          "items": [
+            {"id": "HOU-ITEM-0015", "code": "CL-HOU-0015", "name": "Socks", "serviceType": "Wash", "description": "Everyday Socks", "color": "#A8E6A1"}
+          ]
+        },
+        "window": {
+          "name": "Window",
+          "items": [
+            {"id": "HOU-ITEM-0018", "code": "CL-HOU-0018", "name": "Sheer Curtain", "serviceType": "Wash", "description": "Lightweight Sheers - Machine Wash Gentle", "color": "#A8E6A1"}
+          ]
+        }
+      }
+    },
+    "institutional": {
+      "id": "INS",
+      "name": "Institutional",
+      "subcategories": {
+        "bedding": {
+          "name": "Bedding",
+          "items": [
+            {"id": "INS-ITEM-0001", "code": "CL-INS-0001", "name": "Bedsheet Single", "serviceType": "Wash", "description": "Single-Bed Institutional Sheets", "color": "#A8E6A1"},
+            {"id": "INS-ITEM-0002", "code": "CL-INS-0002", "name": "Bedsheet Double", "serviceType": "Wash", "description": "Double-Bed Institutional Sheets", "color": "#A8E6A1"},
+            {"id": "INS-ITEM-0004", "code": "CL-INS-0004", "name": "Bedspread Single", "serviceType": "Wash", "description": "Lightweight Bedspreads - Check Fabric", "color": "#A8E6A1"},
+            {"id": "INS-ITEM-0005", "code": "CL-INS-0005", "name": "Bedspread Double", "serviceType": "Wash", "description": "Double Bedspreads", "color": "#A8E6A1"},
+            {"id": "INS-ITEM-0006", "code": "CL-INS-0006", "name": "Blanket Single", "serviceType": "Dry Clean", "description": "Heavy Blankets Requiring Solvent Care", "color": "#F6A6A6"},
+            {"id": "INS-ITEM-0007", "code": "CL-INS-0007", "name": "Blanket Double", "serviceType": "Dry Clean", "description": "Large Heavy Blankets", "color": "#F6A6A6"},
+            {"id": "INS-ITEM-0008", "code": "CL-INS-0008", "name": "Quilt Single", "serviceType": "Dry Clean", "description": "Quilts often Need Specialist Cleaning", "color": "#F6A6A6"},
+            {"id": "INS-ITEM-0009", "code": "CL-INS-0009", "name": "Quilt Double", "serviceType": "Dry Clean", "description": "Double Quilts", "color": "#F6A6A6"},
+            {"id": "INS-ITEM-0013", "code": "CL-INS-0013", "name": "Duvet", "serviceType": "Dry Clean", "description": "Filled Duvets — Specialist Service", "color": "#F6A6A6"},
+            {"id": "INS-ITEM-0016", "code": "CL-INS-0016", "name": "Pillow Covers", "serviceType": "Wash", "description": "Standard Pillow Covers", "color": "#A8E6A1"}
+          ]
+        },
+        "towels": {
+          "name": "Towels",
+          "items": [
+            {"id": "INS-ITEM-0003", "code": "CL-INS-0003", "name": "Towel", "serviceType": "Wash", "description": "Bath Towels for Institutions", "color": "#A8E6A1"},
+            {"id": "INS-ITEM-0015", "code": "CL-INS-0015", "name": "Hand Towels", "serviceType": "Wash", "description": "Small Hand Towels", "color": "#A8E6A1"}
+          ]
+        },
+        "furnishing": {
+          "name": "Furnishing",
+          "items": [
+            {"id": "INS-ITEM-0010", "code": "CL-INS-0010", "name": "Chair Cover", "serviceType": "Dry Clean", "description": "Upholstered Covers", "color": "#F6A6A6"},
+            {"id": "INS-ITEM-0011", "code": "CL-INS-0011", "name": "Curtain", "serviceType": "Dry Clean", "description": "Heavy or Delicate Curtains", "color": "#F6A6A6"},
+            {"id": "INS-ITEM-0012", "code": "CL-INS-0012", "name": "Cushion Cover", "serviceType": "Dry Clean", "description": "Velvet-Special Fabric Cushion Covers", "color": "#F6A6A6"}
+          ]
+        },
+        "floors": {
+          "name": "Floors",
+          "items": [
+            {"id": "INS-ITEM-0014", "code": "CL-INS-0014", "name": "Foot Mats", "serviceType": "Dry Clean", "description": "Heavy Mats for Institutions", "color": "#F6A6A6"}
+          ]
+        },
+        "dining": {
+          "name": "Dining",
+          "items": [
+            {"id": "INS-ITEM-0017", "code": "CL-INS-0017", "name": "Table Cloth", "serviceType": "Wash", "description": "Institutional Table Linens", "color": "#A8E6A1"}
+          ]
+        }
+      }
+    },
+    "others": {
+      "id": "OTH",
+      "name": "Others",
+      "subcategories": {
+        "outerwear": {
+          "name": "Outerwear",
+          "items": [
+            {"id": "OTH-ITEM-0001", "code": "CL-OTH-0001", "name": "Rain Coat", "serviceType": "Dry Clean", "description": "PU/PVC Coated Rainwear - Specialist Care", "color": "#F6A6A6"}
+          ]
+        },
+        "accessories": {
+          "name": "Accessories",
+          "items": [
+            {"id": "OTH-ITEM-0002", "code": "CL-OTH-0002", "name": "Hat", "serviceType": "Dry Clean", "description": "Felt/Wool Hats and Structured Headwear", "color": "#F6A6A6"},
+            {"id": "OTH-ITEM-0003", "code": "CL-OTH-0003", "name": "Belt", "serviceType": "Both", "description": "Leather Belts (Spot Clean); Fabric Belts (Wash)", "color": "#FFD580"}
+          ]
+        },
+        "auto": {
+          "name": "Auto",
+          "items": [
+            {"id": "OTH-ITEM-0004", "code": "CL-OTH-0004", "name": "Car Seatcover", "serviceType": "Dry Clean", "description": "Automotive Fabrics and Foam-Backed Covers", "color": "#F6A6A6"}
+          ]
+        },
+        "toys": {
+          "name": "Toys",
+          "items": [
+            {"id": "OTH-ITEM-0005", "code": "CL-OTH-0005", "name": "Stuff Toy", "serviceType": "Wash", "description": "Soft Toys — Machine Wash or Surface Clean Depending on Fill", "color": "#A8E6A1"}
+          ]
+        }
+      }
+    }
+  },
+  "serviceTypes": {
+    "wash": {"name": "Wash", "color": "#A8E6A1"},
+    "dryClean": {"name": "Dry Clean", "color": "#F6A6A6"},
+    "both": {"name": "Both", "color": "#FFD580"}
+  }
+}
