@@ -130,9 +130,8 @@ class OrderPickupScreen extends StatelessWidget {
                     child: CustomElevatedButton(
                       label: 'Arrived at Location',
                       onPressed: () {
-                         // Logic to confirm arrival -> Show verify OTP or items check
-                         // For now, confirm items
-                         _showConfirmItemsDialog(context);
+                         // Go to Verification
+                         context.push(RouteConstants.pickupVerificationScreen);
                       },
                     ),
                   ),

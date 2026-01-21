@@ -9,6 +9,7 @@ import 'package:cleclo_rider/features/home/view/home_screen.dart';
 import 'package:cleclo_rider/features/home/view/order_details_screen.dart';
 import 'package:cleclo_rider/features/location/view/order_delivery_screen.dart';
 import 'package:cleclo_rider/features/location/view/order_pickup_screen.dart';
+import 'package:cleclo_rider/features/location/view/pickup_verification_screen.dart';
 import 'package:cleclo_rider/features/onboarding/view/onboarding_screen.dart';
 import 'package:cleclo_rider/features/profile/view/profile_screen.dart';
 import 'package:flutter/material.dart';
@@ -73,6 +74,10 @@ class RouteConfig {
       GoRoute(
         path: RouteConstants.orderPickupScreen,
         builder: (context, state) => const OrderPickupScreen(),
+      ),
+      GoRoute(
+        path: RouteConstants.pickupVerificationScreen,
+        builder: (context, state) => const PickupVerificationScreen(),
       ),
       GoRoute(
         path: RouteConstants.orderDeliveryScreen,

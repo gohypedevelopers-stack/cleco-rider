@@ -135,7 +135,13 @@ class OrderDetailsScreen extends StatelessWidget {
                   child: CustomElevatedButton(
                     label: 'Accept Order',
                     onPressed: () {
-                      context.push(RouteConstants.orderPickupScreen);
+                      print('DEBUG: Accept Order Clicked outside');
+                      try {
+                         print('DEBUG: Attempting to push ${RouteConstants.orderPickupScreen}');
+                         context.push(RouteConstants.orderPickupScreen);
+                      } catch (e) {
+                        print('DEBUG: Navigation Error: $e');
+                      }
                     },
                   ),
                 ),
@@ -178,7 +184,7 @@ class OrderDetailsScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
             child: const Text(
-              'COD: ₹620',
+              'ONLINE PAYMENT',
               style: TextStyle(
                 color: AppColors.primary,
                 fontWeight: FontWeight.bold,
@@ -211,13 +217,21 @@ class OrderDetailsScreen extends StatelessWidget {
               children: [
                 // Image Placeholder
                 Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.gray100,
-                      borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
-                    ),
-                    child: Center(
-                      child: Icon(Icons.image, color: AppColors.gray400, size: 40),
+                  child: GestureDetector(
+                    onTap: () => _showImageDialog(context, item['image']),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: AppColors.gray100,
+                        borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                        image: DecorationImage(
+                          image: AssetImage(item['image']),
+                          fit: BoxFit.cover,
+                          onError: (exception, stackTrace) {}, // Fallback handled by child
+                        ),
+                      ),
+                      child: item['image'].toString().isEmpty 
+                          ? const Center(child: Icon(Icons.image, color: AppColors.gray400, size: 40))
+                          : null,
                     ),
                   ),
                 ),
@@ -432,5 +446,45 @@ class OrderDetailsScreen extends StatelessWidget {
       path: phoneNumber,
     );
     await launchUrl(launchUri);
+  }
+
+  void _showImageDialog(BuildContext context, String imagePath) {
+    showDialog(
+      context: context,
+      builder: (context) => Dialog(
+        backgroundColor: Colors.transparent,
+        insetPadding: const EdgeInsets.all(10),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              constraints: const BoxConstraints(maxHeight: 500, maxWidth: 500),
+              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: InteractiveViewer(
+                  panEnabled: true,
+                  minScale: 0.5,
+                  maxScale: 4,
+                  child: Image.asset(imagePath, fit: BoxFit.contain, errorBuilder: (context, error, stackTrace) => const SizedBox(height: 300, child: Center(child: Text('Image not available')))),
+                ),
+              ),
+            ),
+            Positioned(
+              top: 0,
+              right: 0,
+              child: GestureDetector(
+                onTap: () => Navigator.pop(context),
+                child: Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: const BoxDecoration(color: Colors.black54, shape: BoxShape.circle),
+                  child: const Icon(Icons.close, color: Colors.white, size: 20),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

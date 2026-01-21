@@ -22,6 +22,7 @@ class RouteConstants {
   // Order Flow
   static const String orderDetailsScreen = '/order-details';
   static const String orderPickupScreen = '/order-pickup';
+  static const String pickupVerificationScreen = '/pickup-verification';
   static const String orderDeliveryScreen = '/order-delivery';
   static const String vendorPickupScreen = '/vendor-pickup';
   static const String vendorDeliveryScreen = '/vendor-delivery';
