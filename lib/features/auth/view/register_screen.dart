@@ -33,27 +33,34 @@ class _RegisterScreenState extends State<RegisterScreen> {
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(24),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Join the Fleet',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: AppColors.black,
+            // Profile Photo Upload
+            Center(
+              child: Stack(
+                children: [
+                   CircleAvatar(
+                    radius: 50,
+                    backgroundColor: AppColors.gray200,
+                    backgroundImage: null, // TODO: Add logic for displaying picked image
+                    child: const Icon(Icons.person, size: 50, color: AppColors.gray400),
+                  ),
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: Container(
+                      padding: const EdgeInsets.all(4),
+                      decoration: const BoxDecoration(
+                        color: AppColors.primary,
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(Icons.camera_alt, color: AppColors.white, size: 20),
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 8),
-            const Text(
-              'Fill in your details to get started.',
-              style: TextStyle(
-                fontSize: 16,
-                color: AppColors.gray500,
-              ),
-            ),
-            const SizedBox(height: 32),
+            const SizedBox(height: 24),
 
-            // Personal Info
             const Text(
               'Personal Information',
               style: TextStyle(
@@ -71,14 +78,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
             const SizedBox(height: 16),
             CustomTextField(
-              label: 'Phone Number',
-              hint: 'Enter your phone number',
-              controller: _phoneController,
-              keyboardType: TextInputType.phone,
-              prefixIcon: const Icon(Icons.phone_outlined),
-            ),
-            const SizedBox(height: 16),
-            CustomTextField(
               label: 'Email Address',
               hint: 'Enter your email',
               controller: _emailController,
@@ -86,22 +85,54 @@ class _RegisterScreenState extends State<RegisterScreen> {
               prefixIcon: const Icon(Icons.email_outlined),
             ),
             const SizedBox(height: 16),
+            
+            // Gender Dropdown
+             Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              decoration: BoxDecoration(
+                color: AppColors.transparent,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.gray300),
+              ),
+              child: DropdownButtonHideUnderline(
+                child: DropdownButton<String>(
+                  value: null, // TODO: Add state
+                  hint: const Text('Select Gender', style: TextStyle(color: AppColors.gray500)),
+                  isExpanded: true,
+                  icon: const Icon(Icons.keyboard_arrow_down, color: AppColors.gray500),
+                  items: ['Male', 'Female', 'Other'].map((String type) {
+                    return DropdownMenuItem<String>(
+                      value: type,
+                      child: Text(type),
+                    );
+                  }).toList(),
+                  onChanged: (String? newValue) {
+                    // TODO: Set state
+                  },
+                ),
+              ),
+            ),
+            const SizedBox(height: 16),
+
             CustomTextField(
-              label: 'Password',
-              hint: 'Create a password',
-              controller: _passwordController,
-              isPassword: true,
-              prefixIcon: const Icon(Icons.lock_outline),
+              label: 'Emergency Contact',
+              hint: 'Emergency contact number',
+              controller: TextEditingController(), // TODO: Add controller
+              keyboardType: TextInputType.phone,
+              prefixIcon: const Icon(Icons.contact_phone_outlined),
             ),
 
             const SizedBox(height: 32),
             // Vehicle Info
-            const Text(
-              'Vehicle Details',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
-                color: AppColors.black,
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Vehicle Details',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.black,
+                ),
               ),
             ),
             const SizedBox(height: 16),
@@ -141,16 +172,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
               controller: _vehicleNumberController,
               prefixIcon: const Icon(Icons.directions_bike),
             ),
-
             const SizedBox(height: 40),
             
             SizedBox(
               width: double.infinity,
               child: CustomElevatedButton(
-                label: 'Continue',
+                label: 'Complete Profile',
                 onPressed: () {
-                  // Navigate to document upload or pending screen
-                  context.push(RouteConstants.verificationPendingScreen);
+                  // Navigate to Home
+                  context.go(RouteConstants.homeScreen);
                 },
               ),
             ),

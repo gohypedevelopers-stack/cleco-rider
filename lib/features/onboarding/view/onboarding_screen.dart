@@ -69,8 +69,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     'Skip',
                     style: TextStyle(
                       fontSize: 16,
-                      color: AppColors.gray500,
-                      fontWeight: FontWeight.w500,
+                      color: AppColors.primary,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),

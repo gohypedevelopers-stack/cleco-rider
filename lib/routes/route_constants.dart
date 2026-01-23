@@ -1,5 +1,6 @@
 class RouteConstants {
   // Onboarding
+  static const String splashScreen = '/';
   static const String onboardingScreen = '/onboarding';
 
   // Auth

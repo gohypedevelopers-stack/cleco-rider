@@ -1,3 +1,4 @@
+import 'package:cleclo_rider/features/splash/view/splash_screen.dart';
 import 'package:cleclo_rider/features/auth/view/auth_welcome_screen.dart';
 import 'package:cleclo_rider/features/auth/view/login_screen.dart';
 import 'package:cleclo_rider/features/auth/view/register_screen.dart';
@@ -11,6 +12,7 @@ import 'package:cleclo_rider/features/location/view/order_delivery_screen.dart';
 import 'package:cleclo_rider/features/location/view/order_pickup_screen.dart';
 import 'package:cleclo_rider/features/location/view/pickup_verification_screen.dart';
 import 'package:cleclo_rider/features/onboarding/view/onboarding_screen.dart';
+import 'package:cleclo_rider/features/auth/view/otp_verification_screen.dart';
 import 'package:cleclo_rider/features/profile/view/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -26,8 +28,14 @@ class PlaceholderScreen extends StatelessWidget {
 
 class RouteConfig {
   static final GoRouter router = GoRouter(
-    initialLocation: RouteConstants.onboardingScreen,
+    initialLocation: RouteConstants.splashScreen,
     routes: [
+      // Splash
+      GoRoute(
+        path: RouteConstants.splashScreen,
+        builder: (context, state) => const SplashScreen(),
+      ),
+
       // Onboarding
       GoRoute(
         path: RouteConstants.onboardingScreen,
@@ -50,6 +58,13 @@ class RouteConfig {
       GoRoute(
         path: RouteConstants.verificationPendingScreen,
         builder: (context, state) => const VerificationPendingScreen(),
+      ),
+      GoRoute(
+        path: RouteConstants.verifyOtpScreen,
+        builder: (context, state) {
+          final phone = state.extra as String;
+          return OtpVerificationScreen(phoneNumber: phone);
+        },
       ),
 
       // Home & Dashboard

@@ -48,35 +48,45 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(height: 32),
 
             // Form
-            CustomTextField(
-              label: 'Email / Phone',
-              hint: 'Enter your email or phone',
-              controller: _emailController,
-              prefixIcon: const Icon(Icons.email_outlined),
+            const Text(
+              'Phone Number',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                color: AppColors.black,
+              ),
             ),
-            const SizedBox(height: 20),
-            CustomTextField(
-              label: 'Password',
-              hint: 'Enter your password',
-              controller: _passwordController,
-              isPassword: true,
-              prefixIcon: const Icon(Icons.lock_outline),
-            ),
-            
-            const SizedBox(height: 12),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                onPressed: () {
-                  // context.push(RouteConstants.forgotPasswordScreen);
-                },
-                child: const Text(
-                  'Forgot Password?',
-                  style: TextStyle(
-                    color: AppColors.primary,
-                    fontWeight: FontWeight.w600,
+            const SizedBox(height: 8),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: AppColors.gray300),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+                    decoration: const BoxDecoration(
+                      border: Border(right: BorderSide(color: AppColors.gray300)),
+                    ),
+                    child: const Row(
+                      children: [
+                        Text('🇮🇳 +91', style: TextStyle(fontSize: 16)),
+                        Icon(Icons.arrow_drop_down, size: 20),
+                      ],
+                    ),
                   ),
-                ),
+                  Expanded(
+                    child: TextField(
+                      controller: _emailController,
+                      keyboardType: TextInputType.phone,
+                      decoration: const InputDecoration(
+                        hintText: 'Enter phone number',
+                        border: InputBorder.none,
+                        contentPadding: EdgeInsets.symmetric(horizontal: 16),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             
@@ -84,9 +94,16 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(
               width: double.infinity,
               child: CustomElevatedButton(
-                label: 'Login',
+                label: 'Continue',
                 onPressed: () {
-                  context.go(RouteConstants.homeScreen);
+                  final phone = _emailController.text.trim();
+                  if (phone.length < 10) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Please enter a valid phone number')),
+                    );
+                    return;
+                  }
+                  context.push(RouteConstants.verifyOtpScreen, extra: phone);
                 },
               ),
             ),
