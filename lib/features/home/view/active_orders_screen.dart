@@ -12,7 +12,7 @@ class ActiveOrdersScreen extends StatelessWidget {
     return Scaffold(
       appBar: const CustomAppBar(
         title: 'Active Orders',
-        showBackButton: true,
+        showBackButton: false,
       ),
       body: ListView.builder(
         padding: const EdgeInsets.all(20),

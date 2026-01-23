@@ -1,3 +1,4 @@
+import 'package:cleclo_rider/components/order_card.dart';
 import 'package:cleclo_rider/routes/route_constants.dart';
 import 'package:cleclo_rider/utils/images/images.dart';
 import 'package:cleclo_rider/utils/theme/colors.dart';
@@ -81,14 +82,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       icon: Icons.history,
                       title: 'Order History',
                       subtitle: 'View your completed deliveries',
-                      onTap: () {}, // TODO: Link to history
+                      onTap: () {
+                        context.push(RouteConstants.orderHistoryScreen);
+                      },
                     ),
                     const SizedBox(height: 12),
                     _buildQuickActionTile(
                       icon: Icons.help_outline,
                       title: 'Help & Support',
                       subtitle: 'Get assistance with ongoing orders',
-                      onTap: () {}, // TODO: Link to support
+                      onTap: () {
+                        context.push(RouteConstants.helpSupportScreen);
+                      },
                     ),
                   ],
                 ),
@@ -97,24 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
-        elevation: 8,
-        selectedItemColor: AppColors.primary,
-        unselectedItemColor: AppColors.gray400,
-        showUnselectedLabels: true,
-        type: BottomNavigationBarType.fixed,
-        currentIndex: 0,
-        onTap: (index) {
-          if (index == 1) context.push(RouteConstants.activeOrdersScreen);
-          if (index == 2) context.push(RouteConstants.profileScreen);
-        },
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.grid_view_rounded), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.list_alt_rounded), label: 'Orders'),
-          BottomNavigationBarItem(icon: Icon(Icons.person_outline_rounded), label: 'Profile'),
-        ],
-      ),
+
     );
   }
 
@@ -325,64 +313,61 @@ class _HomeScreenState extends State<HomeScreen> {
       );
     }
 
-    // Online State - Simulated "New Orders"
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        color: const Color(0xFFF0FDF4), // Light Green
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: AppColors.success.withOpacity(0.3)),
-      ),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: AppColors.success.withOpacity(0.1),
-                  shape: BoxShape.circle,
-                ),
-                child: const Icon(Icons.notifications_active, color: AppColors.success),
-              ),
-              const SizedBox(width: 16),
-              const Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'New Orders Available!',
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: AppColors.black),
-                    ),
-                    Text(
-                      '2 orders close to your location',
-                      style: TextStyle(fontSize: 13, color: AppColors.gray600),
-                    ),
-                  ],
-                ),
-              ),
-              const Icon(Icons.arrow_forward_ios, size: 16, color: AppColors.gray400),
-            ],
-          ),
-          const SizedBox(height: 16),
-          SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () {
-                context.push(RouteConstants.availableOrdersScreen);
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.success,
-                padding: const EdgeInsets.symmetric(vertical: 14),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                elevation: 0,
-              ),
-              child: const Text('View Orders', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+    // Online State - List of New Orders
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text(
+              'New Orders (2)',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
+            TextButton(
+              onPressed: () => context.push(RouteConstants.availableOrdersScreen),
+              child: const Text('View All'),
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        SizedBox(
+          height: 290, // Increased height to prevent overflow
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: 2,
+            itemBuilder: (context, index) {
+              return Container(
+                width: 300, // Card width
+                margin: const EdgeInsets.only(right: 16, bottom: 10), // Added bottom margin for shadow
+                child: RiderOrderCard(
+                  orderId: 'ORD-#${20234 + index}',
+                  pickupAddress: index == 0 ? 'Home 12, Saket' : 'Office 4, Nehru Place',
+                  deliveryAddress: 'Laundry Hub, Sector 18',
+                  distance: '${2.5 + index} km',
+                  earnings: '₹${65 + (index * 10)}',
+                  serviceType: index == 0 ? 'Wash & Fold' : 'Dry Clean',
+                  onAccept: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Order Accepted! Redirecting...')),
+                    );
+                    // Navigate to Active Orders or similar
+                    context.go(RouteConstants.activeOrdersScreen);
+                  },
+                  onDecline: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Order Ignored')),
+                    );
+                  },
+                  onTap: () {
+                     context.push(RouteConstants.availableOrdersScreen);
+                  },
+                ),
+              );
+            },
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 
@@ -476,3 +461,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+

@@ -30,6 +30,7 @@ class RouteConstants {
   static const String navigationScreen = '/navigation';
   static const String photoProofScreen = '/photo-proof';
   static const String orderHistoryScreen = '/order-history';
+  static const String helpSupportScreen = '/help-support';
 
   // Earnings
   static const String earningsScreen = '/earnings';
