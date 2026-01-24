@@ -68,8 +68,8 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
     }
 
     // Mock verification
-    // Navigate to Registration for new user flow
-    context.push(RouteConstants.registerScreen);
+    // Navigate to Home (assuming success for login demo)
+    context.go(RouteConstants.homeScreen);
   }
 
   @override
