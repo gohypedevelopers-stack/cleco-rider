@@ -1,6 +1,9 @@
 import 'package:cleclo_rider/components/custom_appbar.dart';
 import 'package:cleclo_rider/utils/theme/colors.dart';
+import 'package:cleclo_rider/routes/route_constants.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HelpSupportScreen extends StatelessWidget {
   const HelpSupportScreen({super.key});
@@ -23,21 +26,29 @@ class HelpSupportScreen extends StatelessWidget {
               icon: Icons.question_answer_outlined,
               title: 'FAQ',
               subtitle: 'Commonly asked questions',
-              onTap: () {},
+              onTap: () => context.push(RouteConstants.faqScreen),
             ),
             const SizedBox(height: 16),
             _buildSupportTile(
               icon: Icons.chat_bubble_outline,
               title: 'Live Chat',
               subtitle: 'Chat with our support team',
-              onTap: () {},
+              onTap: () => context.push(RouteConstants.liveChatScreen),
             ),
             const SizedBox(height: 16),
             _buildSupportTile(
               icon: Icons.phone_outlined,
               title: 'Call Support',
               subtitle: 'Speak directly to an agent',
-              onTap: () {},
+              onTap: () async {
+                final Uri launchUri = Uri(
+                  scheme: 'tel',
+                  path: '+911234567890',
+                );
+                if (await canLaunchUrl(launchUri)) {
+                  await launchUrl(launchUri);
+                }
+              },
             ),
             const SizedBox(height: 32),
             const Text(

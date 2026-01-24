@@ -60,9 +60,7 @@ class ProfileScreen extends StatelessWidget {
             _buildProfileOption(
               icon: Icons.person_outline,
               label: 'Personal Information',
-              onTap: () {
-                // Future: Edit Profile
-              },
+              onTap: () => context.push(RouteConstants.personalInfoScreen),
             ),
              _buildProfileOption(
               icon: Icons.directions_bike,

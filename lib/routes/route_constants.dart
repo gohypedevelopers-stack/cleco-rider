@@ -31,6 +31,8 @@ class RouteConstants {
   static const String photoProofScreen = '/photo-proof';
   static const String orderHistoryScreen = '/order-history';
   static const String helpSupportScreen = '/help-support';
+  static const String faqScreen = '/faq';
+  static const String liveChatScreen = '/live-chat';
 
   // Earnings
   static const String earningsScreen = '/earnings';
@@ -42,5 +44,6 @@ class RouteConstants {
   static const String vehicleDetailsScreen = '/vehicle-details';
   static const String documentsScreen = '/documents';
   static const String bankDetailsScreen = '/bank-details'; // Added
+  static const String personalInfoScreen = '/personal-info';
   static const String settingsScreen = '/settings';
 }
