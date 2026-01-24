@@ -41,5 +41,6 @@ class RouteConstants {
   static const String editProfileScreen = '/edit-profile';
   static const String vehicleDetailsScreen = '/vehicle-details';
   static const String documentsScreen = '/documents';
+  static const String bankDetailsScreen = '/bank-details'; // Added
   static const String settingsScreen = '/settings';
 }

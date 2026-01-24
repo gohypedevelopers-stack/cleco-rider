@@ -60,37 +60,39 @@ class ProfileScreen extends StatelessWidget {
             _buildProfileOption(
               icon: Icons.person_outline,
               label: 'Personal Information',
-              onTap: () {},
+              onTap: () {
+                // Future: Edit Profile
+              },
             ),
              _buildProfileOption(
               icon: Icons.directions_bike,
               label: 'Vehicle Details',
-              onTap: () {},
+              onTap: () => context.push(RouteConstants.vehicleDetailsScreen),
             ),
              _buildProfileOption(
               icon: Icons.assignment_outlined,
               label: 'Documents & Verification',
-              onTap: () {},
+              onTap: () => context.push(RouteConstants.documentsScreen),
             ),
              _buildProfileOption(
               icon: Icons.account_balance_outlined,
               label: 'Bank Account & Payouts',
-              onTap: () {},
+              onTap: () => context.push(RouteConstants.bankDetailsScreen),
             ),
              _buildProfileOption(
               icon: Icons.history,
               label: 'Order History',
-              onTap: () {},
+              onTap: () => context.push(RouteConstants.orderHistoryScreen),
             ),
             _buildProfileOption(
               icon: Icons.settings_outlined,
               label: 'Settings',
-              onTap: () {},
+              onTap: () => context.push(RouteConstants.settingsScreen),
             ),
              _buildProfileOption(
               icon: Icons.help_outline,
               label: 'Help & Support',
-              onTap: () {},
+              onTap: () => context.push(RouteConstants.helpSupportScreen),
             ),
             
             const SizedBox(height: 40),

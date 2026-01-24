@@ -94,8 +94,7 @@ class OrderDeliveryScreen extends StatelessWidget {
                     child: CustomElevatedButton(
                       label: 'Arrived at Drop Location',
                       onPressed: () {
-                         // Show payment collection or photo proof screen
-                         context.go(RouteConstants.homeScreen);
+                         _showDeliveryConfirmation(context);
                       },
                     ),
                   ),
@@ -108,11 +107,73 @@ class OrderDeliveryScreen extends StatelessWidget {
     );
   }
   
-   Future<void> _makePhoneCall(String phoneNumber) async {
+  Future<void> _makePhoneCall(String phoneNumber) async {
     final Uri launchUri = Uri(
       scheme: 'tel',
       path: phoneNumber,
     );
     await launchUrl(launchUri);
+  }
+
+  void _showDeliveryConfirmation(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => AlertDialog(
+        title: const Text('Confirm Delivery'),
+        content: const Text('Have you handed over the package to the customer or left it at the designated safe place?'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.pop(context); // Close dialog
+              // Navigate to Success / Home
+              _showSuccessDialog(context);
+            },
+            child: const Text('Confirm'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showSuccessDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.check_circle, color: AppColors.success, size: 64),
+            const SizedBox(height: 16),
+            const Text(
+              'Order Delivered!',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'Great job! You earned ₹85 for this order.',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: AppColors.gray600),
+            ),
+            const SizedBox(height: 24),
+            SizedBox(
+              width: double.infinity,
+              child: CustomElevatedButton(
+                label: 'Back to Home',
+                onPressed: () {
+                  context.go(RouteConstants.homeScreen);
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

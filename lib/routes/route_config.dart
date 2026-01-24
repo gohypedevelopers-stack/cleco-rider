@@ -17,6 +17,10 @@ import 'package:cleclo_rider/features/location/view/pickup_verification_screen.d
 import 'package:cleclo_rider/features/onboarding/view/onboarding_screen.dart';
 import 'package:cleclo_rider/features/auth/view/otp_verification_screen.dart';
 import 'package:cleclo_rider/features/profile/view/profile_screen.dart';
+import 'package:cleclo_rider/features/profile/view/vehicle_details_screen.dart';
+import 'package:cleclo_rider/features/profile/view/documents_screen.dart';
+import 'package:cleclo_rider/features/profile/view/bank_details_screen.dart';
+import 'package:cleclo_rider/features/profile/view/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:cleclo_rider/routes/route_constants.dart';
@@ -147,6 +151,26 @@ class RouteConfig {
         parentNavigatorKey: rootNavigatorKey,
         path: RouteConstants.orderDeliveryScreen,
         builder: (context, state) => const OrderDeliveryScreen(),
+      ),
+      GoRoute(
+        parentNavigatorKey: rootNavigatorKey,
+        path: RouteConstants.vehicleDetailsScreen,
+        builder: (context, state) => const VehicleDetailsScreen(),
+      ),
+      GoRoute(
+        parentNavigatorKey: rootNavigatorKey,
+        path: RouteConstants.documentsScreen,
+        builder: (context, state) => const DocumentsScreen(),
+      ),
+      GoRoute(
+        parentNavigatorKey: rootNavigatorKey,
+        path: RouteConstants.bankDetailsScreen,
+        builder: (context, state) => const BankDetailsScreen(),
+      ),
+      GoRoute(
+        parentNavigatorKey: rootNavigatorKey,
+        path: RouteConstants.settingsScreen,
+        builder: (context, state) => const SettingsScreen(),
       ),
     ],
   );
