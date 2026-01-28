@@ -33,6 +33,22 @@ class OrderDeliveryScreen extends StatelessWidget {
                   height: 40,
                   child: const Icon(Icons.store, color: AppColors.primary, size: 40),
                 ),
+                Marker(
+                  point: const LatLng(28.5355, 77.3910), // Pickup/Current location
+                  width: 40,
+                  height: 40,
+                  child: const Icon(Icons.directions_bike, color: Colors.blue, size: 40),
+                ),
+              ],
+              polylines: [
+                Polyline(
+                  points: [
+                    const LatLng(28.5700, 77.3200),
+                    const LatLng(28.5355, 77.3910),
+                  ],
+                  color: AppColors.primary,
+                  strokeWidth: 4.0,
+                ),
               ],
             ),
           ),

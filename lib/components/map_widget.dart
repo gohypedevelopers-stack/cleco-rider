@@ -6,12 +6,14 @@ class MapWidget extends StatelessWidget {
   final LatLng initialCenter;
   final double initialZoom;
   final List<Marker> markers;
+  final List<Polyline> polylines;
 
   const MapWidget({
     super.key,
     this.initialCenter = const LatLng(28.6139, 77.2090), // New Delhi default
     this.initialZoom = 13.0,
     this.markers = const [],
+    this.polylines = const [],
   });
 
   @override
@@ -25,6 +27,9 @@ class MapWidget extends StatelessWidget {
         TileLayer(
           urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
           userAgentPackageName: 'com.example.cleclo_rider',
+        ),
+        PolylineLayer(
+          polylines: polylines,
         ),
         MarkerLayer(
           markers: markers,

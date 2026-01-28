@@ -35,6 +35,22 @@ class OrderPickupScreen extends StatelessWidget {
                       height: 40,
                       child: const Icon(Icons.location_on, color: AppColors.primary, size: 40),
                     ),
+                     Marker(
+                      point: const LatLng(28.5500, 77.3800), // Rider location
+                      width: 40,
+                      height: 40,
+                      child: const Icon(Icons.directions_bike, color: Colors.blue, size: 40),
+                    ),
+                  ],
+                  polylines: [
+                    Polyline(
+                      points: [
+                        const LatLng(28.5355, 77.3910),
+                        const LatLng(28.5500, 77.3800),
+                      ],
+                      color: AppColors.primary,
+                      strokeWidth: 4.0,
+                    ),
                   ],
                 ),
                 Positioned(
