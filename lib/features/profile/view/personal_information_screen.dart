@@ -20,9 +20,9 @@ class PersonalInformationScreen extends StatelessWidget {
               child: Icon(Icons.person, size: 50, color: AppColors.gray600),
             ),
             const SizedBox(height: 32),
-            _buildInfoField('Full Name', 'Ravindra Kumar'),
+            _buildInfoField('Full Name', 'Ravindra Jha'),
             _buildInfoField('Mobile Number', '+91 98765 43210'),
-            _buildInfoField('Email Address', 'ravindra.kumar@example.com'),
+            _buildInfoField('Email Address', 'ravindra.jha@example.com'),
             _buildInfoField('Gender', 'Male'),
             _buildInfoField('Date of Birth', '15 Aug 1990'),
             

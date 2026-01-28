@@ -139,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(fontSize: 12, color: AppColors.gray500),
                 ),
                 Text(
-                  'Ravindra Kumar',
+                  'Ravindra Jha',
                   style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,

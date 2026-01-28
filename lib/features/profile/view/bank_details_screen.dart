@@ -29,7 +29,7 @@ class BankDetailsScreen extends StatelessWidget {
                   const Text('HDFC Bank', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                   const Text('Main Branch, New Delhi', style: TextStyle(color: AppColors.gray500)),
                   const Divider(height: 32),
-                  _buildRow('Account Holder', 'Ravindra Kumar'),
+                  _buildRow('Account Holder', 'Ravindra Jha'),
                   _buildRow('Account Number', '**** **** 1234'),
                   _buildRow('IFSC Code', 'HDFC0001234'),
                 ],
