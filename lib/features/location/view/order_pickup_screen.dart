@@ -1,9 +1,12 @@
 import 'package:cleclo_rider/components/custom_appbar.dart';
 import 'package:cleclo_rider/components/custom_elevated_button.dart';
+import 'package:cleclo_rider/components/map_widget.dart';
 import 'package:cleclo_rider/routes/route_constants.dart';
 import 'package:cleclo_rider/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_map/flutter_map.dart';
 import 'package:go_router/go_router.dart';
+import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class OrderPickupScreen extends StatelessWidget {
@@ -23,19 +26,16 @@ class OrderPickupScreen extends StatelessWidget {
             flex: 4,
             child: Stack(
               children: [
-                Container(
-                  color: AppColors.gray200,
-                  width: double.infinity,
-                  child: const Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.map, size: 64, color: AppColors.gray400),
-                        SizedBox(height: 8),
-                        Text('Map View Placeholder', style: TextStyle(color: AppColors.gray500)),
-                      ],
+                MapWidget(
+                  initialCenter: const LatLng(28.5355, 77.3910), // Example: Noida
+                  markers: [
+                    Marker(
+                      point: const LatLng(28.5355, 77.3910),
+                      width: 40,
+                      height: 40,
+                      child: const Icon(Icons.location_on, color: AppColors.primary, size: 40),
                     ),
-                  ),
+                  ],
                 ),
                 Positioned(
                   bottom: 16,

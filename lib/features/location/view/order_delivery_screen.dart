@@ -1,9 +1,12 @@
 import 'package:cleclo_rider/components/custom_appbar.dart';
 import 'package:cleclo_rider/components/custom_elevated_button.dart';
+import 'package:cleclo_rider/components/map_widget.dart';
 import 'package:cleclo_rider/routes/route_constants.dart';
 import 'package:cleclo_rider/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_map/flutter_map.dart';
 import 'package:go_router/go_router.dart';
+import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class OrderDeliveryScreen extends StatelessWidget {
@@ -21,12 +24,16 @@ class OrderDeliveryScreen extends StatelessWidget {
           // Map Placeholder
           Expanded(
             flex: 4,
-            child: Container(
-              color: AppColors.gray200,
-              width: double.infinity,
-              child: const Center(
-                    child: Text('Map View Placeholder', style: TextStyle(color: AppColors.gray500)),
-              ),
+            child: MapWidget(
+              initialCenter: const LatLng(28.5700, 77.3200), // Example: Sec 18 Noida
+              markers: [
+                Marker(
+                  point: const LatLng(28.5700, 77.3200),
+                  width: 40,
+                  height: 40,
+                  child: const Icon(Icons.store, color: AppColors.primary, size: 40),
+                ),
+              ],
             ),
           ),
           
